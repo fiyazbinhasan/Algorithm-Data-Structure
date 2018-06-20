@@ -1,0 +1,11 @@
+/Users/fiyazhasan/Desktop/Algorithm and Data Structure 1/DoublyLinkedList/bin/Debug/netcoreapp2.1/DoublyLinkedList.deps.json
+/Users/fiyazhasan/Desktop/Algorithm and Data Structure 1/DoublyLinkedList/bin/Debug/netcoreapp2.1/DoublyLinkedList.runtimeconfig.json
+/Users/fiyazhasan/Desktop/Algorithm and Data Structure 1/DoublyLinkedList/bin/Debug/netcoreapp2.1/DoublyLinkedList.runtimeconfig.dev.json
+/Users/fiyazhasan/Desktop/Algorithm and Data Structure 1/DoublyLinkedList/bin/Debug/netcoreapp2.1/DoublyLinkedList.dll
+/Users/fiyazhasan/Desktop/Algorithm and Data Structure 1/DoublyLinkedList/bin/Debug/netcoreapp2.1/DoublyLinkedList.pdb
+/Users/fiyazhasan/Desktop/Algorithm and Data Structure 1/DoublyLinkedList/obj/Debug/netcoreapp2.1/DoublyLinkedList.csprojAssemblyReference.cache
+/Users/fiyazhasan/Desktop/Algorithm and Data Structure 1/DoublyLinkedList/obj/Debug/netcoreapp2.1/DoublyLinkedList.csproj.CoreCompileInputs.cache
+/Users/fiyazhasan/Desktop/Algorithm and Data Structure 1/DoublyLinkedList/obj/Debug/netcoreapp2.1/DoublyLinkedList.AssemblyInfoInputs.cache
+/Users/fiyazhasan/Desktop/Algorithm and Data Structure 1/DoublyLinkedList/obj/Debug/netcoreapp2.1/DoublyLinkedList.AssemblyInfo.cs
+/Users/fiyazhasan/Desktop/Algorithm and Data Structure 1/DoublyLinkedList/obj/Debug/netcoreapp2.1/DoublyLinkedList.dll
+/Users/fiyazhasan/Desktop/Algorithm and Data Structure 1/DoublyLinkedList/obj/Debug/netcoreapp2.1/DoublyLinkedList.pdb
