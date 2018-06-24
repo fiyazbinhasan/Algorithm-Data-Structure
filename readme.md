@@ -99,7 +99,7 @@ Q = [value4, value5, value3]
 
 x = Q[head]        // x = Q[3] = value3
 
-tail == Q.length
+head == Q.length
 head = 1           // head = 1 tail = 3
 
 return x           // return value3
