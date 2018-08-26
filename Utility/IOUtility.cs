@@ -6,7 +6,7 @@ namespace Utility
 {
     static class IOUtility
     {
-        public static int[] CreateArryWithElements()
+        public static int[] CreateArrayWithElements()
         {
             Console.WriteLine("Number of elements?");
             Int32 n = Convert.ToInt32(Console.ReadLine());
