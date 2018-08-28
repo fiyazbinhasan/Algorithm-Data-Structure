@@ -7,7 +7,7 @@ namespace SelectionSort
     {
         static void Main(string[] args)
         {
-            var arr = IOUtility.CreateArrayWithElements();
+            var arr = IOUtility.CreateArrayByInput();
             
             /* 
              * Don't need to loop around till the last one
@@ -31,7 +31,7 @@ namespace SelectionSort
                 arr[minIndex] = temp;
             }
 
-            IOUtility.PrintArrayElements(arr);
+            IOUtility.PrintArray(arr);
 
             // [2, 4, 1, 3]
             // minIndex = 0

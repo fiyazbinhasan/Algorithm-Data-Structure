@@ -10,7 +10,7 @@ namespace BubbleSort
             /* Pushes the largest element to the the end of the array (wall) */
             /* Move the wall a step ahead since the last element is sorted already */
 
-            var arr = IOUtility.CreateArrayWithElements();
+            var arr = IOUtility.CreateArrayByInput();
              
             var wall = arr.Length; 
 
@@ -29,7 +29,7 @@ namespace BubbleSort
                 wall--;
             }
 
-            IOUtility.PrintArrayElements(arr);
+            IOUtility.PrintArray(arr);
 
             // [2, 4, 1, 3]
             // wall = 4
