@@ -79,18 +79,7 @@ namespace MergeSort
 
             // [5, 10, 40, 23, 2]
 
-            // MergeSort(arr, 3, 4) 
-            // 3 < 4 true
-            // m = 3 + (4 - 3) / 2 = 2
-            // MergeSort(arr, 3, 2)
-            // 3 < 2 false     // Start with MergeSort(arr, 3, 4)
-
-            // MergeSort(arr, 3, 4)
-            // 3 < 4
-            // m = 2 
-            // MergeSort(arr, 3, 2)
-            // 3 < 2 false
-            // MergeSort(arr, 3, 4)
+            // continue
         }
 
         static void MergeSort(int[] arr, int l, int r)
