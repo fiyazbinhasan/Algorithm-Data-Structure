@@ -39,6 +39,70 @@ namespace BinaryTree
             }
         }
 
+        public BinaryTreeNode<T> Search(T value)
+        {
+            return TreeSearch(_head, value);
+        }
+
+        private BinaryTreeNode<T> TreeSearch(BinaryTreeNode<T> node, T value)
+        {
+            if (node != null)
+            {
+                var res = value.CompareTo(node.Value);
+
+                if (res < 0)
+                    return TreeSearch(node.Left, value);
+                else if (res > 0)
+                    return TreeSearch(node.Right, value);
+                else
+                    return node;
+            }
+            else
+                throw new ArgumentException("Entry not found in the binary tree");
+        }
+
+        public T FindMinimum()
+        {
+            BinaryTreeNode<T> current = _head;
+            while(current.Left != null)
+            {
+                current = current.Left;
+            }
+            return current.Value;
+        }
+
+        public T FindMaximum()
+        {
+            BinaryTreeNode<T> current = _head;
+            while (current.Right != null)
+            {
+                current = current.Right;
+            }
+            return current.Value;
+        }
+
+        public BinaryTreeNode<T> Successor(BinaryTreeNode<T> node)
+        {
+            if(node.Right != null)
+            {
+                BinaryTreeNode<T> current = node.Right;
+                while(current.Left != null)
+                {
+                    current = current.Left;
+                }
+                return current;
+            }
+
+            var parent = FindWithParent(node.Value).parent;
+
+            while (parent != null && node == parent.Right)
+            {
+                node = parent;
+                parent = FindWithParent(parent.Value).parent;
+            }
+            return parent;
+        }
+
         public bool Contains(T value)
         {
             var (node, parent) = FindWithParent(value);
