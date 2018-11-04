@@ -40,7 +40,7 @@ namespace Graph
             Console.WriteLine(list.Contains(1, 3));
             Console.WriteLine(list.Contains(3, 0));
 
-            var iterator = new AdjacencyMatrixNeighborIterator(list, 2);
+            var iterator = new AdjacencyListNeighborIterator(list, 2);
 
             while (iterator.MoveNext())
             {
