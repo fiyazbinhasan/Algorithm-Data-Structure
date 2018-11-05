@@ -36,7 +36,7 @@ namespace Graph
         public void AddEdge(int u, int v)
         {
             List[u].AddLast(v);
-            List[v].AddLast(u);
+            List[v].AddLast(u); // if the graph is directed then comment this line of code
             Edges++;
         }
 
@@ -79,7 +79,7 @@ namespace Graph
             _index++;
             while (_index < _list.Vertices)
             {
-                if (_list.List[_index].Contains(_vertex)) return true;
+                if (_list.List[_vertex].Contains(_index)) return true;
                 _index++;
             }
             return false;

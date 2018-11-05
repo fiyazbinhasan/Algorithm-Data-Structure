@@ -29,26 +29,33 @@ namespace Graph
             // Directed Adjacency Graph
 
             AdjacencyList list = new AdjacencyList(4);
-            list.AddEdge(0, 0);
             list.AddEdge(0, 1);
+            list.AddEdge(0, 2);
             list.AddEdge(1, 2);
             list.AddEdge(2, 0);
             list.AddEdge(2, 3);
-            list.AddEdge(1, 3);
-            list.AddEdge(3, 1);
+            list.AddEdge(3, 3);
 
-            Console.WriteLine(list.Contains(1, 3));
-            Console.WriteLine(list.Contains(3, 0));
+            //Console.WriteLine(list.Contains(1, 3));
+            //Console.WriteLine(list.Contains(3, 0));
 
-            var iterator = new AdjacencyListNeighborIterator(list, 2);
+            //var iterator = new AdjacencyListNeighborIterator(list, 2);
 
-            while (iterator.MoveNext())
+            //while (iterator.MoveNext())
+            //{
+            //    var currentItem = iterator.Current;
+            //    Console.WriteLine(currentItem);
+            //}
+
+            //Console.WriteLine(list.ToString());
+
+            BreadthFirstSearch bfs = new BreadthFirstSearch(list);
+
+            foreach (var vertex in bfs.Traverse(2))
             {
-                var currentItem = iterator.Current;
-                Console.WriteLine(currentItem);
+                Console.WriteLine(vertex);
             }
 
-            Console.WriteLine(list.ToString());
             Console.ReadLine();
         }
     }
