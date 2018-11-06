@@ -49,12 +49,16 @@ namespace Graph
 
             //Console.WriteLine(list.ToString());
 
-            BreadthFirstSearch bfs = new BreadthFirstSearch(list);
+            //BreadthFirstSearch bfs = new BreadthFirstSearch(list);
 
-            foreach (var vertex in bfs.Traverse(2))
-            {
-                Console.WriteLine(vertex);
-            }
+            //foreach (var vertex in bfs.Traverse(2))
+            //{
+            //    Console.WriteLine(vertex);
+            //}
+
+            DepthFirstSearch dfs = new DepthFirstSearch(list);
+
+            dfs.Traverse(2, (v) => Console.WriteLine(v));
 
             Console.ReadLine();
         }
