@@ -54,8 +54,8 @@ namespace BubbleSort
             // Finish looping although the array is sorted.
 
             /* 
-             * Algorithm can be optimised by maintaining a flag
-             * After itering over the inner loop if the value of the flag is still fale, 
+             * Algorithm can be optimized by maintaining a flag
+             * After iterating over the inner loop if the value of the flag is still false, 
              * then there is nothing left to swap and we can break from the outer loop 
              */
         }

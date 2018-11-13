@@ -9,11 +9,11 @@ namespace QuickSort
         {
             /*
              * We start with an unsorted array and choose a pivot point (last element in this case)
-             * Consider a wall at the begining of the array
+             * Consider a wall at the beginning of the array
              * We start by comparing the pivot element with the first element
              * If it is lower than the pivot the wall is shifted to the right and the values are swapped
              * When all the comparisons are done, increment the wall and swap the value of it with the pivot
-             * Return the wall so that we can devide the array into halves and apply the same technique for each array
+             * Return the wall so that we can divide the array into halves and apply the same technique for each array
              * Do this recursively until the front index is less than the rear index
              */
             var arr = IOUtility.CreateArrayRandomly();
@@ -52,7 +52,7 @@ namespace QuickSort
             // swap a[wall + 1] = a[3] = 4 with a[rear] = pivot = 3
             // [2, 0, 1, 3, 4]
 
-            // devide the array into 2
+            // divide the array into 2
             // array1 starts from 0, (wall + 1) - 1 
             // array2 starts from (wall + 1) + 1 to rear
 

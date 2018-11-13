@@ -48,7 +48,7 @@ namespace SelectionSort
             // swap => [1, 2, 4, 3]
             // -------------
             // minIndex = 2
-            // 3 < 4 truel
+            // 3 < 4 true
             // minIndex = 3
             // swap => [1, 2, 3, 4]
         }

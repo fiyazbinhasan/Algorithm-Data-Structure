@@ -7,7 +7,7 @@ namespace InsertionSort
         static void Main(string[] args)
         {
             /* In place insertion sort */
-            /* Imagine deviding the array into a sorted and an unsorted sub arrays */
+            /* Imagine dividing the array into a sorted and an unsorted sub arrays */
             /* Array with single element is always sorted */
             /* Compare the elements of the unsorted array with the elements of the sorted array and perform insertion */
 

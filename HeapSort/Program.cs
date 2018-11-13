@@ -8,8 +8,8 @@ namespace HeapSort
         static void Main(string[] args)
         {
             /*
-             *  Build a max heap from the array of elements. Devide the array into halves and run max heapify.
-             *  Compare a root with its left and right child in a bottom up recursive fasion.
+             *  Build a max heap from the array of elements. Divide the array into halves and run max heapify.
+             *  Compare a root with its left and right child in a bottom up recursive fashion.
              *  Replace the first element of the max heap with the last and run max heapify on starting form the 0th index
              * */
 
