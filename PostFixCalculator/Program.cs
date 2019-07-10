@@ -7,7 +7,7 @@ namespace PostFixCalculator
     {
         static void Main(string[] args)
         {
-            var result = Calculate("5", "6", "7", "*", "+", "1", "-", ")");
+            var result = Calculate("5", "6", "7", "*", "+", "1", "-");
             Console.WriteLine(result);
             Console.ReadLine();
         }
@@ -18,7 +18,7 @@ namespace PostFixCalculator
 
             foreach (var token in args)
             {
-                bool isOperand = int.TryParse(token, out int value);
+                var isOperand = int.TryParse(token, out var value);
 
                 if (isOperand)
                     stack.Push(value);

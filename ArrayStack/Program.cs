@@ -7,7 +7,7 @@ namespace ArrayStack
     public class Stack<T> : IEnumerable<T>
     {
         T[] _items = new T[0];
-        int _size;
+        int _size = default(int);
 
         public void Push(T value)
         {
@@ -36,9 +36,7 @@ namespace ArrayStack
             return _items[_size - 1];
         }
 
-        public int Count {
-            get { return _size; }
-        }
+        public int Count => _size;
 
         public void Clear()
         {
@@ -59,7 +57,7 @@ namespace ArrayStack
         }
     }
 
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {

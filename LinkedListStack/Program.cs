@@ -6,7 +6,7 @@ namespace LinkedListStack
 {
     public class Stack<T> : IEnumerable<T>
     {
-        private LinkedList<T> _list = new LinkedList<T>();
+        private readonly LinkedList<T> _list = new LinkedList<T>();
 
         public void Push(T value)
         {
@@ -27,10 +27,7 @@ namespace LinkedListStack
             return _list.First.Value;
         }
 
-        public int Count 
-        {
-            get { return _list.Count; }
-        }
+        public int Count => _list.Count;
 
         public void Clear()
         {
@@ -48,7 +45,7 @@ namespace LinkedListStack
         }
     }
 
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
