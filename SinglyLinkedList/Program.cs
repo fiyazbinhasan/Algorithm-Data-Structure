@@ -10,72 +10,65 @@ namespace SinglyLinkedList
         {
             Value = value;
         }
-        public T Value { get; set; }
+        public T Value { get; private set; }
         public LinkedListNode<T> Next { get; set; }
     }
 
     class LinkedList<T> : IEnumerable<T>
     {
-        private LinkedListNode<T> head;
-        private LinkedListNode<T> tail;
-        private int count;
+        private LinkedListNode<T> _head;
+        private LinkedListNode<T> _tail;
+        private int _count;
 
         public void AddFirst(LinkedListNode<T> node)
         {
-            LinkedListNode<T> temp = head;
-            head = node;
-            head.Next = temp;
-            if (count == 0)
-            {
-                tail = head;
-            }
-            count++;
+            LinkedListNode<T> temp = _head;
+            _head = node;
+            _head.Next = temp;
+            if (_count == 0)
+                _tail = _head;
+            _count++;
         }
         public void AddLast(LinkedListNode<T> node)
         {
-            if (count == 0)
-            {
-                head = node;
-            }
+            if (_count == 0)
+                _head = node;
             else
-            {
-                tail.Next = node;
-            }
-            tail = node;
-            count++;
+                _tail.Next = node;
+            _tail = node;
+            _count++;
         }
 
         public void RemoveFirst()
         {
-            count--;
-            if (count == 0)
-            {
-                head = tail = null;
-            }
+            _count--;
+            if (_count == 0)
+                _head = _tail = null;
             else
-            {
-                head = head.Next;
-            }
+                _head = _head.Next;
         }
         public void RemoveLast()
         {
-            count--;
-            if (count == 0)
+            _count--;
+            if (_count == 0)
             {
-                head = null;
-                tail = null;
+                _head = null;
+                _tail = null;
             }
-            LinkedListNode<T> current = head;
-            while (current.Next != tail)
+            else
             {
-                current = current.Next;
+                LinkedListNode<T> current = _head;
+                while (current.Next != _tail)
+                {
+                    current = current.Next;
+                }
+                current.Next = null;
+                _tail = current;
             }
-            current.Next = null;
-            tail = current;
         }
         public IEnumerator<T> GetEnumerator()
         {
-            LinkedListNode<T> current = head;
+            LinkedListNode<T> current = _head;
             while (current != null)
             {
                 yield return current.Value;
@@ -89,7 +82,7 @@ namespace SinglyLinkedList
         }
     }
 
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {

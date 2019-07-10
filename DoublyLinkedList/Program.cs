@@ -10,78 +10,69 @@ namespace DoublyLinkedList
         {
             Value = value;
         }
-        public T Value { get; set; }
+        public T Value { get; private set; }
         public DoublyLinkedListNode<T> Next { get; set; }
         public DoublyLinkedListNode<T> Previous { get; set; }
     }
     class LinkedList<T> : IEnumerable<T>
     {
-        private DoublyLinkedListNode<T> head;
-        private DoublyLinkedListNode<T> tail;
-        private int count;
+        private DoublyLinkedListNode<T> _head;
+        private DoublyLinkedListNode<T> _tail;
+        private int _count;
 
         public void AddFirst(DoublyLinkedListNode<T> node)
         {
-            // null <- 5 <-> 6 <-> 7<->
-            //
+            DoublyLinkedListNode<T> temp = _head;
+            _head = node;
+            _head.Next = temp;
 
-            DoublyLinkedListNode<T> temp = head;
-            head = node;
-            head.Next = temp;
-
-            if (count == 0)
-            {
-                tail = head;
-            }
+            if (_count == 0)
+                _tail = _head;
             else
-            {
-                temp.Previous = head;
-            }
+                temp.Previous = _head;
 
-            count++;
+            _count++;
         }
         public void AddLast(DoublyLinkedListNode<T> node)
         {
-            if (count == 0)
-            {
-                head = node;
-            }
+            if (_count == 0)
+                _head = node;
             else
             {
-                tail.Next = node;
-                node.Previous = tail;
+                _tail.Next = node;
+                node.Previous = _tail;
             }
-            tail = node;
-            count++;
+            _tail = node;
+            _count++;
         }
 
         public void RemoveFirst()
         {
-            count--;
-            if (count == 0)
-            {
-                head = tail = null;
-            }
+            _count--;
+            if (_count == 0)
+                _head = _tail = null;
             else
             {
-                head = head.Next;
-                head.Previous = null;
+                _head = _head.Next;
+                _head.Previous = null;
             }
         }
         public void RemoveLast()
         {
-            count--;
-            if (count == 0)
+            _count--;
+            if (_count == 0)
             {
-                head = tail = null;
-            } // 5 <-> 6 <-> 7
-
-            tail.Previous.Next = null;
-            tail = tail.Previous;
+                _head = _tail = null;
+            }
+            else
+            {
+                _tail.Previous.Next = null;
+                _tail = _tail.Previous;
+            }
         }
         public IEnumerator<T> GetEnumerator()
         {
-            DoublyLinkedListNode<T> current = head;
+            DoublyLinkedListNode<T> current = _head;
             while (current != null)
             {
                 yield return current.Value;
