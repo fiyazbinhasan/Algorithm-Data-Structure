@@ -6,7 +6,7 @@ namespace LinkedListQueue
 {
     public class Queue<T> : IEnumerable<T>
     {
-        private LinkedList<T> _items = new LinkedList<T>();
+        private readonly LinkedList<T> _items = new LinkedList<T>();
 
         public void Enqueue(T value)
         {
@@ -29,10 +29,7 @@ namespace LinkedListQueue
             return _items.First.Value;
         }
 
-        public int Count 
-        {
-            get { return _items.Count; }
-        }
+        public int Count => _items.Count;
 
         public void Clear()
         {
@@ -49,11 +46,13 @@ namespace LinkedListQueue
             return GetEnumerator();
         }
     }
-    class Program
+
+    static class Program
     {
         static void Main(string[] args)
         {
             Queue<int> queue = new Queue<int>();
+
             queue.Enqueue(1);
             queue.Enqueue(2);
             queue.Enqueue(3);

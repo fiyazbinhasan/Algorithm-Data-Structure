@@ -6,7 +6,7 @@ namespace PriorityQueue
 {
     public class Queue<T> : IEnumerable<T> where T : IComparable<T>
     {
-        LinkedList<T> _items = new LinkedList<T>();
+        readonly LinkedList<T> _items = new LinkedList<T>();
 
         public void Enqueue(T value)
         {
@@ -41,9 +41,7 @@ namespace PriorityQueue
             return _items.First.Value;
         }
 
-        public int Count {
-            get { return _items.Count; }
-        }
+        public int Count => _items.Count;
 
         public void Clear() 
         {
@@ -60,7 +58,8 @@ namespace PriorityQueue
             return GetEnumerator();
         }
     }
-    class Program
+
+    static class Program
     {
         static void Main(string[] args)
         {

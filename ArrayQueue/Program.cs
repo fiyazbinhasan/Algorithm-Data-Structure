@@ -7,9 +7,9 @@ namespace ArrayQueue
     public class Queue<T> : IEnumerable<T>
     {
         T[] _items = new T[0];
-        int _size = 0;
-        int _head = 0;
-        int _tail = -1;
+        private int _size;
+        private int _head;
+        private int _tail;
 
         public void Enqueue(T value)
         {
@@ -93,13 +93,7 @@ namespace ArrayQueue
             return _items[_head];
         }
 
-        public int Count
-        {
-            get
-            {
-                return _size;
-            }
-        }
+        public int Count => _size;
 
         public void Clear()
         {
@@ -139,7 +133,7 @@ namespace ArrayQueue
         }
     }
 
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
@@ -162,7 +156,8 @@ namespace ArrayQueue
                 Console.Write($"{item} \t");
             }
 
-            queue.Enqueue(1);
+            queue.Enqueue(5);
+            queue.Enqueue(6);
 
             Console.WriteLine();
 
