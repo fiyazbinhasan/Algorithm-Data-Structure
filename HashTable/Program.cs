@@ -8,9 +8,9 @@ namespace HashTable
         {
             Console.WriteLine("Hello World!");
 
-            HashTable<string, string> hashTable = new HashTable<string, string>();
-            hashTable.Add("Fiyaz", "Hasan");
-            hashTable.Add("facebook", "http://www.facebook.com");
+            HashTable<string, string> hashTable = new HashTable<string, string>(100);
+            hashTable.Add("name", "Fiyaz");
+            hashTable.Add("github", "https://www.github.com/fiyazbinhasan");
             Console.WriteLine(hashTable["Fiyaz"]);
             Console.WriteLine(hashTable["facebook"]);
             Console.ReadLine();

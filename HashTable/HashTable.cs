@@ -126,9 +126,6 @@ namespace HashTable
             _count = 0;
         }
 
-        public int Count
-        {
-            get { return _count; }
-        }
+        public int Count => _count;
     }
 }
